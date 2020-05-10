@@ -1,0 +1,15 @@
+package graphique.formes;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	Cercle c = new Cercle("a",1,14,15);
+    	
+        System.out.println( "lon"+c.getAbscisse() );
+    }
+}

@@ -1,0 +1,25 @@
+package graphique.formes;
+
+public class Carre {
+	private double longueur;
+	
+	public Carre() {
+		this("", 0, 0, 0);
+	}
+
+	public Carre(String id, int abscisse, int ordonnee, double longueur) {
+		super(id, abscisse, ordonnee);
+		this.longueur = longueur;
+	}
+
+
+	public double getLongueur() {
+		return longueur;
+	}
+
+	public void setLongueur(double longueur) {
+		this.longueur = longueur;
+	}
+
+
+}

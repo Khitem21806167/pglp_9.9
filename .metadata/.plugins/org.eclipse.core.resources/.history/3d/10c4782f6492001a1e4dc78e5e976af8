@@ -1,0 +1,16 @@
+package graphique.formes;
+
+/**
+ * Hello world!
+ * execution : mvn package exec:java
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	
+    	
+        System.out.println("TEST " );
+    }
+}
