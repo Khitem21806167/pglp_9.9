@@ -1,0 +1,37 @@
+package graphique.formes;
+import graphique.formes.*;
+import static org.junit.Assert.*;
+
+import java.util.Scanner;
+
+import org.junit.Test;
+
+public class GroupeFormeTest {
+	/*@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+*/
+	
+	@Test
+	public void GroupeformeTest() {
+		GroupeForme g = new GroupeForme();
+    	Cercle c = new Cercle("cercle1",15,10,11);
+    	Triangle t = new Triangle("triangle1", 2, 3, 8, 19);
+    	g.addForme(c);
+    	g.addForme(t);
+        g.print();
+       
+        
+      /*  assertEquals("Cercle(centre=(15, 103), rayon=11.0)\r\n" + 
+        		"Triangle(coin=(2, 3), hauteur=8.0, base=19.0)" , g.print());
+       assertTrue("Cercle(centre=(15, 103), rayon=11.0)\r\n" + 
+        		"Triangle(coin=(2, 3), hauteur=8.0, base=19.0)" , g.print());*/
+        
+
+	}
+	
+
+
+	
+}

@@ -1,0 +1,5 @@
+package graphique.formes;
+
+public interface Graphic {
+
+}

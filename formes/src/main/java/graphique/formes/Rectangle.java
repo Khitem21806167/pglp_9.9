@@ -30,5 +30,21 @@ public class Rectangle extends Forme {
 	public void setLargeur(double largeur) {
 		this.largeur = largeur;
 	}
+	
+	@Override
+	public void print() {
+		System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		return "Rectangle(coin=("+getAbscisse()+", "+getOrdonnee()+"), longueur="+getLongueur()+", largeur="+getLargeur()+")";
+	}
+
+	@Override
+	public String afficher() {
+		// TODO Auto-generated method stub
+		return "Rectangle(coin=("+getAbscisse()+", "+getOrdonnee()+"), longueur="+getLongueur()+", largeur="+getLargeur()+")\n";
+		}
 
 }

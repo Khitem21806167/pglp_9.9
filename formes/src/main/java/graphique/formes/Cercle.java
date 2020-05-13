@@ -20,5 +20,21 @@ public class Cercle extends Forme {
 	public void setRayon(double rayon) {
 		this.rayon = rayon;
 	}
+	
+	@Override
+	public void print() {
+		System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		return "Cercle(centre=("+getAbscisse()+", "+getOrdonnee()+"), rayon="+getRayon()+")";
+	}
+
+	@Override
+	public String afficher() {
+		// TODO Auto-generated method stub
+		return "Cercle(centre=("+getAbscisse()+", "+getOrdonnee()+"), rayon="+getRayon()+")\n";
+	}
 
 }

@@ -29,6 +29,22 @@ public class Triangle extends Forme {
 	public void setBase(double base) {
 		this.base = base;
 	}
+	
+	@Override
+	public void print() {
+		System.out.println(this);
+	}
+	
+	@Override
+	public String toString() {
+		return "Triangle(coin=("+getAbscisse()+", "+getOrdonnee()+"), hauteur="+getHauteur()+", base="+getBase()+")";
+	}
+
+	@Override
+	public String afficher() {
+		// TODO Auto-generated method stub
+		return "Triangle(coin=("+getAbscisse()+", "+getOrdonnee()+"), hauteur="+getHauteur()+", base="+getBase()+")\n";
+		}
 
 
 

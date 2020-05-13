@@ -1,0 +1,6 @@
+package graphique.formes;
+
+public interface Graphic {
+	public String print();
+	public void move(int dx, int dy);
+}

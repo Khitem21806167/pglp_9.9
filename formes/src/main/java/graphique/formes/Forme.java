@@ -1,6 +1,6 @@
 package graphique.formes;
 
-public class Forme {
+public abstract class Forme implements Graphic{
 	
 	private String id;
 	private int abscisse, ordonnee;
@@ -37,6 +37,20 @@ public class Forme {
 
 	public void setOrdonnee(int ordonnee) {
 		this.ordonnee = ordonnee;
+	}
+
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void move(int dx, int dy) {
+		// TODO Auto-generated method stub
+		setAbscisse(getAbscisse() + dx);
+		setOrdonnee(getOrdonnee() + dy);
+		
 	}
 
 

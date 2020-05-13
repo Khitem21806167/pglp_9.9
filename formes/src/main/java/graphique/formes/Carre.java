@@ -22,5 +22,22 @@ public class Carre extends Forme {
 		this.longueur = longueur;
 	}
 
+	@Override
+	public void print() {
+		// TODO Auto-generated method stub
+		System.out.println(this);
+
+	}
+	
+	@Override
+	public String toString() {
+		return "Carre(coin=("+getAbscisse()+", "+getOrdonnee()+"), longueur="+getLongueur()+")";
+	}
+
+	@Override
+	public String afficher() {
+		// TODO Auto-generated method stub
+		return "Carre(coin=("+getAbscisse()+", "+getOrdonnee()+"), longueur="+getLongueur()+")\n";
+	}
 
 }
