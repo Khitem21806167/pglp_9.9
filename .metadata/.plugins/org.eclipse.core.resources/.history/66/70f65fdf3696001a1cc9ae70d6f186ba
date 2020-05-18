@@ -1,0 +1,105 @@
+package dao;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+import graphique.formes.*;
+
+public class TriangleDAO extends DAO<Triangle> {
+	Statement stmt = null;
+    ResultSet result = null;
+
+	@Override
+	public Triangle create(Triangle obj) {
+		try {
+			stmt = connect.createStatement();
+			result = stmt.executeQuery("INSERT INTO Triangle(idTriangle, abscisse, ordonnee, hauteur, base) VALUES('"+obj.getId()+"', '"+obj.getAbscisse()+"'"
+         		+ ", '"+obj.getOrdonnee()+"', '"+obj.getHauteur()+"', '"+obj.getBase()+"')");
+			/*PreparedStatement prepare = connect.prepareStatement("INSERT INTO Triangle(idTriangle, abscisse, ordonnee, hauteur , base) VALUES(?, ?, ?, ?, ?)");
+			prepare.setString(1, obj.getId());
+			prepare.setInt(2, obj.getAbscisse());
+			prepare.setInt(3, obj.getOrdonnee());
+			prepare.setDouble(4, obj.getHauteur());
+			prepare.setDouble(5, obj.getBase());
+
+			int result = prepare.executeUpdate();*/
+			assert result == 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;	
+	}
+
+	@Override
+	public Triangle find(String idTriangle) {
+		Triangle obj = new Triangle();
+		try {
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("SELECT * FROM Triangle WHERE idTriangle='"+idTriangle+"'");
+			/*PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Triangle WHERE idTriangle=?");
+			prepare.setString(1, idTriangle);
+			ResultSet result = prepare.executeQuery();*/
+			while(result.next()) {
+				obj = new Triangle(idTriangle, result.getInt("abscisse"), result.getInt("ordonnee"), result.getDouble("hauteur"), result.getDouble("base"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+	@Override
+	public List<Triangle> findAll() {
+		List<Triangle> triangles = new ArrayList<Triangle>();
+		try {
+			/*PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Triangle");
+			ResultSet result = prepare.executeQuery();*/
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("SELECT * FROM Triangle");
+			while(result.next()) {
+				triangles.add(new Triangle(result.getString("idTriangle"), result.getInt("abscisse"), result.getInt("ordonnee"), result.getDouble("hauteur"), result.getDouble("base")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return triangles;
+	}
+
+	@Override
+	public Triangle update(Triangle obj) {
+		try {
+			stmt = connect.createStatement();
+			result = stmt.executeQuery("UPDATE Triangle SET abscisse='"+obj.getAbscisse()+"', ordonnee='"+obj.getOrdonnee()+"',"
+	         		+ " hauteur='"+obj.getHauteur()+"',"+" base='"+obj.getBase()+"', WHERE idTriangle='"+obj.getId()+"' ");
+			/*PreparedStatement prepare = connect.prepareStatement("UPDATE Triangle SET abscisse = ?, ordonnee = ?, hauteur = ?, base = ? WHERE idTriangle = ?");
+			prepare.setInt(1, obj.getAbscisse());
+			prepare.setInt(2, obj.getOrdonnee());
+			prepare.setDouble(3, obj.getHauteur());
+			prepare.setDouble(4, obj.getBase());
+			prepare.setString(5, obj.getId());
+			int result = prepare.executeUpdate();
+			assert result == 1;*/
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+	@Override
+	public void delete(Triangle obj) {
+		try {
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("DELETE Triangle WHERE idTriangle='"+obj.getId()+"'");
+			/*PreparedStatement prepare = connect.prepareStatement("DELETE Triangle WHERE idTriangle = ?");
+			prepare.setString(1, obj.getId());
+			int result = prepare.executeUpdate();
+			assert result == 1;*/
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}	
+		
+	}
+
+}

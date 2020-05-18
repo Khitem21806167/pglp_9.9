@@ -4,9 +4,7 @@ public class Cercle extends Forme {
 	
 	private double rayon;
 	
-	public Cercle() {
-		this("", 0, 0, 0);
-	}
+	public Cercle(){}
 
 	public Cercle(String id, int abscisse, int ordonnee, double rayon) {
 		super(id, abscisse, ordonnee);

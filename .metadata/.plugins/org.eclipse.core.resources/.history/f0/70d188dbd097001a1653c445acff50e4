@@ -1,0 +1,148 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import java.sql.Statement;
+
+import graphique.formes.Cercle;
+
+public class CercleDAO extends DAO<Cercle> {
+	Statement stmt = null;
+    ResultSet result = null;
+
+	@Override
+	public Cercle create(Cercle obj) {
+		try {
+			
+	        String db = "jdbc:hsqldb:hsql://localhost/graphic;ifexists=true";
+	        String user = "SA";
+	        String password = "";
+	        
+	     
+	            // Create database connection
+	            try {
+					connect = DriverManager.getConnection(db, user, password);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+	            // Create and execute statement
+			 stmt = connect.createStatement();
+			 System.out.println("1");
+	         result = stmt.executeQuery("INSERT INTO Cercle(idCercle, abscisse, ordonnee, rayon) VALUES('"+obj.getId()+"', '"+obj.getAbscisse()+"'"
+	         		+ ", '"+obj.getOrdonnee()+"', '"+obj.getRayon()+"')");
+	         System.out.println("2");
+	         System.out.println(result.getFetchSize());
+			/*PreparedStatement prepare = connect.prepareStatement("INSERT INTO Cercle(idCercle, abscisse, ordonnee, rayon) VALUES(?, ?, ?, ?)");
+			prepare.setString(1, obj.getId());
+			prepare.setInt(2, obj.getAbscisse());
+			prepare.setInt(3, obj.getOrdonnee());
+			prepare.setDouble(4, obj.getRayon());
+			int result = prepare.executeUpdate();*/
+	         
+			//assert result == 1;
+			System.out.println("cercle Created :D");
+		
+       
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+	@Override
+	public Cercle find(String idCercle) {
+		Cercle obj = new Cercle();
+		 
+		try {
+
+	        String db = "jdbc:hsqldb:hsql://localhost/graphic;ifexists=true";
+	        String user = "SA";
+	        String password = "";
+	        
+	     
+	            // Create database connection
+	            try {
+					connect = DriverManager.getConnection(db, user, password);
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("SELECT * FROM CERCLE WHERE idCercle='"+idCercle+"'");
+			/*PreparedStatement prepare = connect.prepareStatement("SELECT * FROM CERCLE WHERE idCercle=?");
+			prepare.setString(1, idCercle);
+			//prepare.executeUpdate();
+			result = prepare.executeQuery();*/
+	         
+	         
+			while(result.next()) {
+				System.out.println("Ok");
+				obj = new Cercle(idCercle, result.getInt("abscisse"), result.getInt("ordonnee"), result.getDouble("rayon"));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+	@Override
+	public List<Cercle> findAll() {
+		List<Cercle> cercles = new ArrayList<Cercle>();
+		try {
+/*			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Cercle");
+			ResultSet result = prepare.executeQuery();*/
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("SELECT * FROM Cercle");
+			
+			while(result.next()) {
+				cercles.add(new Cercle(result.getString("idCercle"), result.getInt("abscisse"), result.getInt("ordonnee"), result.getDouble("rayon")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return cercles;
+	}
+	
+	@Override
+	public Cercle update(Cercle obj) {
+		try {
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("UPDATE Cercle SET abscisse='"+obj.getAbscisse()+"', ordonnee='"+obj.getOrdonnee()+"',"
+	         		+ " rayon='"+obj.getRayon()+"', WHERE idCercle='"+obj.getId()+"' ");
+			
+			/*PreparedStatement prepare =connect.prepareStatement("UPDATE Cercle SET abscisse = ?, ordonnee = ?, rayon = ? WHERE idCercle = ?");
+			prepare.setInt(1, obj.getAbscisse());
+			prepare.setInt(2, obj.getOrdonnee());
+			prepare.setDouble(3, obj.getRayon());
+			prepare.setString(4, obj.getId());
+			int result = prepare.executeUpdate();
+			assert result == 1;*/
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}
+
+	@Override
+	public void delete(Cercle obj) {
+		try {
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("DELETE Cercle WHERE idCercle='"+obj.getId()+"'");
+			
+			/*PreparedStatement prepare = connect.prepareStatement("DELETE Cercle WHERE idCercle = ?");
+			prepare.setString(1, obj.getId());
+			int result = prepare.executeUpdate();
+			assert result == 1;*/
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

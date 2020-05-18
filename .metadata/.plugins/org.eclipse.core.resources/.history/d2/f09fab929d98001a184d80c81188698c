@@ -1,0 +1,151 @@
+package dao;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+public abstract class DAO<T> {
+	
+	public Connection connect;
+    protected Statement stmt = null;
+
+	
+	public DAO() {
+		try {
+			  
+		      /*  String db = "jdbc:hsqldb:hsql://localhost/graphic;ifexists=true";
+		        String user = "SA";
+		        String password = "";
+		      */
+		 String url = "jdbc:derby:myDB;create=true";
+			   
+		     
+		            // Create database connection
+		          
+						//connect = DriverManager.getConnection(db, user, password);
+         //connect = DriverManager.getConnection(dbURL); 
+
+	         stmt = connect.createStatement();
+	         try {
+	              Connection con = DriverManager.getConnection(url);
+	              java.sql.Statement statement =con.createStatement();
+	              statement.execute("CREATE TABLE ENSEMBLE ( idEnsemble VARCHAR(10), idForme VARCHAR(10))");
+	             
+	            
+	              	
+	              
+	          } catch (SQLException e) {
+	              e.printStackTrace();
+	          }*/
+	         /********************************************************************
+	 
+	         String sqlForme = "CREATE TABLE ENSEMBLE(idEnsemble VARCHAR(100), idForme VARCHAR(100) )";
+	         
+	         String sqlCarre = "CREATE TABLE CARRE " +
+                     "(idCarre VARCHAR(100) PRIMARY KEY,"+
+                     " abscisse INTEGER ,"+
+        	         "ordonnee INTEGER ," +
+                     " longueur DOUBLE)";
+                     
+	         
+	         String sqlTriangle= "CREATE TABLE TRIANGLE " +
+                     "(idTriangle VARCHAR(100) PRIMARY KEY,"+
+                     " abscisse INTEGER,"+
+        	         "ordonnee INTEGER, "+
+                     " hauteur DOUBLE, " +
+                     " base DOUBLE) ";
+                    
+	         
+	         String sqlRectangle= "CREATE TABLE RECTANGLE " +
+                     "(idRectangle VARCHAR(100) PRIMARY KEY,"+
+                     " abscisse INTEGER,"+
+        	         "ordonnee INTEGER, "+
+                     " longueur DOUBLE, " +
+                     " largeur DOUBLE, )";
+	         
+	         String sqlCercle= "CREATE TABLE CERCLE " +
+                     "(idCercle VARCHAR(100) PRIMARY KEY,"+
+                     " abscisse INTEGER,"+
+        	         "ordonnee INTEGER, "+
+                     " rayon DOUBLE)";
+	         
+	       DatabaseMetaData dbm = connect.getMetaData();
+	      // check if "FORME" table is there
+	      ResultSet tables = dbm.getTables(null, null, "ENSEMBLE", null);
+	      if (tables.next()) {
+	        // Table exists
+	    	  System.out.println("table already exist !");
+	      }
+	      else {
+	        // Table does not exist
+	    	  stmt.executeQuery(sqlForme);
+	      }
+	      tables = dbm.getTables(null, null, "CERCLE", null);
+	      if (tables.next()) {
+		        // Table exists
+		   	  //System.out.println("table exist already !");
+		      }
+		      else {
+		        // Table does not exist
+		    	  stmt.executeQuery(sqlCercle);
+		      }     
+	      tables = dbm.getTables(null, null, "TRIANGLE", null);
+	      if (tables.next()) {
+		        // Table exists
+		    //	  System.out.println("table exist already !");
+		      }
+		      else {
+		        // Table does not exist
+		    	  stmt.executeQuery(sqlTriangle);
+		      }     
+	      tables = dbm.getTables(null, null, "CARRE", null);
+	      if (tables.next()) {
+		        // Table exists
+		    //	  System.out.println("table exist already !");
+		      }
+		      else {
+		        // Table does not exist
+		    	  stmt.executeQuery(sqlCarre);
+		      }  
+	      tables = dbm.getTables(null, null, "RECTANGLE", null);
+	      if (tables.next()) {
+		        // Table exists
+		    //	  System.out.println("table exist already !");
+		      }
+		      else {
+		        // Table does not exist
+		    	  stmt.executeQuery(sqlRectangle);
+		      }     
+	        
+	        // System.out.println("tables created ");
+
+		} catch(Exception e){
+			e.printStackTrace();
+		}finally{
+		      //finally block used to close resources
+		      try{
+		         if(stmt!=null)
+		            connect.close();
+		      }catch(SQLException se){
+		      }// do nothing
+		      try{
+		         if(connect!=null)
+		            connect.close();
+		      }catch(SQLException se){
+		         se.printStackTrace();
+		      }//end finally try
+		   }//end try	
+	}*/
+	  
+	
+	public abstract T create (T obj);
+	public abstract T find (String id);
+	public abstract List<T> findAll ();
+	public abstract T update (T obj);
+	public abstract void delete (T obj);
+
+
+}

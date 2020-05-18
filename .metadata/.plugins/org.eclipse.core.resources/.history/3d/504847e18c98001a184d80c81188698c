@@ -1,0 +1,197 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Vector;
+
+import graphique.formes.Cercle;
+import graphique.formes.Forme;
+import graphique.formes.Graphic;
+import graphique.formes.GroupeForme;
+
+public class GroupeFormeDAO extends DAO<GroupeForme> {
+	Statement stmt = null;
+    ResultSet result = null;
+
+  
+	@Override
+	public GroupeForme create(GroupeForme obj) {
+		// TODO Auto-generated method stub
+		List<Graphic> l=obj.getChildren();
+		
+		 String idEns=obj.getIdEnsemble();
+		 try {
+			 stmt=connect.createStatement();
+			for (int i=0; i<l.size();i++)
+			{
+				System.out.println(l.get(0));
+				Forme f=(Forme) l.get(i);
+				private List<Forme> j = new ArrayList<Forme>(); 
+				j=l.get(i);
+				//String sql="INSERT INTO ENSEMBLE (idEnsemble,idForme) VALUES( '"+obj.getIdEnsemble()+"','"+f.getId()+"')"; // ARRAY"+l+" )");
+				java.sql.PreparedStatement state = connect.prepareStatement("insert into ENSEMBLE (idEnsemble, idForme) values (?,?)");
+				state.setString(1, obj.getIdEnsemble());
+				state.setString(2,f.getId());
+				state.execute();
+				result = state.executeQuery();
+				if(result.first()) {
+					System.out.println("created");
+				}
+				else System.out.println("erreur");
+				}
+			
+			/*
+					String sql="INSERT INTO Ensemble VALUES( '"+obj.getIdEnsemble()+"',ARRAY[D'])"); // ARRAY"+l+" )");
+					chouf wesh gali wahed bah nkherej les id ta3 chaque forme :
+						obj.getChildren().get(0).
+				System.out.println("ok");
+			*/
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			
+		}
+		 
+		/* try {++++++++++++++++++++++++++++++++++
+			 ArrayList<Graphic> liste;
+			 liste=obj.getChildren();
+			
+				//stmt = connect.createStatement();
+			/*	for(Iterator it=obj.getChildren(); it.hasNext();) {
+				 Forme x=(Forme) it.next();	
+				 String a = x.getId();
+				 System.out.println("ici"+a);
+				 System.out.println("ICI"+obj.getIdEnsemble());*/
+			/*	for(int i = 0 ; i<liste.size(); i++){
+				//result=stmt.executeQuery("INSERT INTO ENSEMBLE (idEnsemble,idForme) VALUES ('"+o.get(i).idEnsemble()+"','"+obj.getChildren()+"')");
+					java.sql.PreparedStatement state = connect.prepareStatement("insert into ENSEMBLE(idEnsemble, idForme) values (?,?)");
+					state.setString(1, obj.getIdEnsemble());
+					state.setString(2, liste.get(i).afficher());
+					ResultSet result = state.executeQuery();
+					if(result.first()) {
+						System.out.println("created");
+					}
+					else System.out.println("erreur");
+					}
+				
+		 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			*/
+
+		return obj;
+
+	}
+
+
+	/*@Override
+	public GroupeForme find(String idEnsemble) {
+		// TODO Auto-generated method stub
+		GroupeForme obj = new GroupeForme();
+		
+		 try {
+			stmt = connect.createStatement();
+			
+			 result=stmt.executeQuery("select * from ENSEMBLE where idEnsemble='"+idEnsemble+"'");
+			 
+			 while(result.next()) {
+					obj = new GroupeForme(idEnsemble, result.getArray("idForme"));
+					System.out.println(obj.getIdEnsemble());
+				}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
+		 
+	 public GroupeForme find(String idEnsemble) {
+			 GroupeForme obj = new GroupeForme();
+				 
+				try {
+					System.out.println("1 -------"+idEnsemble);
+					 stmt = connect.createStatement();
+					 System.out.println("2");
+			         //result = stmt.executeQuery("SELECT * FROM ENSEMBLE WHERE idEnsemble='"+idEnsemble+'"');
+			         result = stmt.executeQuery("SELECT * FROM ENSEMBLE");
+			        //if(!result.next()) System.out.println("nothing found");
+			         System.out.println("3");
+			         
+					while(result.next()) {
+						//System.out.println("xsxs");
+						obj = new GroupeForme(idEnsemble,result.getString("idForme"));
+						System.out.println("khitem"+result.getString("idForme").toString());
+					}
+			         }catch (SQLException e) {
+					e.printStackTrace();
+				}
+				return obj;
+				}
+
+	@Override
+	public List<GroupeForme> findAll() {
+		// TODO Auto-generated method stub
+		GroupeForme obj = new GroupeForme();
+		List<GroupeForme> GroupeFormes = new ArrayList<GroupeForme>();
+		try {
+
+			 stmt = connect.createStatement();
+			// for(Iterator it=obj.getChildren(); it.hasNext();) {
+	         result = stmt.executeQuery("SELECT * FROM ENSEMBLE");
+	         while(result.next()) {
+					GroupeFormes.add(new GroupeForme(result.getString("idEnsemble"), result.getArray("idForme") ));
+				}
+	        
+			 	
+			 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return GroupeFormes;
+	}
+
+/*	@Override
+	public GroupeForme update(GroupeForme obj) {
+		// TODO Auto-generated method stub
+		try {
+			 stmt = connect.createStatement();
+			// for(Iterator it=obj.getChildren(); it.hasNext();) {
+
+	         result = stmt.executeQuery("UPDATE ENSEMBLE SET idEnsemble='"+obj.getIdEnsemble()+"', Forme='"+it.next()+"' ");
+			 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return obj;
+	}*/
+
+	@Override
+	public void delete(GroupeForme obj) {
+		// TODO Auto-generated method stub
+		try {
+			 stmt = connect.createStatement();
+	         result = stmt.executeQuery("DELETE FROM ENSEMBLE WHERE idEnsemble='"+obj.getIdEnsemble()+"'");
+			 
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+
+	@Override
+	public GroupeForme update(GroupeForme obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
