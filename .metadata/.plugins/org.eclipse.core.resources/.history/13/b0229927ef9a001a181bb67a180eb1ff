@@ -1,0 +1,15 @@
+package cmd;
+
+import graphique.formes.Forme;
+
+public class CreateCarreCommand implements Command {
+
+	@Override
+	public void execute(Forme f) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+}

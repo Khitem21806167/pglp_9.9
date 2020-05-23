@@ -1,0 +1,21 @@
+package cmd;
+/*
+ ***  command ACTION (start)
+ */
+
+public class CommandAction implements Command {
+	
+	DrawingTUI a ;
+	
+	CommandAction(DrawingTUI a){
+		this.a=a ;
+	}
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		a.start() ;// a implementer dans DrawingUIT();
+		
+	}
+
+}

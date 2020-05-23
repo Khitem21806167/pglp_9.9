@@ -1,0 +1,19 @@
+package cmd;
+
+import graphique.formes.Triangle;
+
+public class CreateTriangleCommand implements Command {
+	private Triangle triangle;
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		triangle.print();
+	}
+	public Triangle getTriangle() {
+		return triangle;
+	}
+	public void setTriangle(Triangle triangle) {
+		this.triangle = triangle;
+	}
+
+}

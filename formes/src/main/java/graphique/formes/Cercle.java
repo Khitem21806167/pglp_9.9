@@ -4,7 +4,11 @@ public class Cercle extends Forme {
 	
 	private double rayon;
 	
-	public Cercle(){}
+	public Cercle()
+	{
+		
+	}
+	
 
 	public Cercle(String id, int abscisse, int ordonnee, double rayon) {
 		super(id, abscisse, ordonnee);
@@ -34,5 +38,5 @@ public class Cercle extends Forme {
 		// TODO Auto-generated method stub
 		return "Cercle(centre=("+getAbscisse()+", "+getOrdonnee()+"), rayon="+getRayon()+")\n";
 	}
-
+	
 }

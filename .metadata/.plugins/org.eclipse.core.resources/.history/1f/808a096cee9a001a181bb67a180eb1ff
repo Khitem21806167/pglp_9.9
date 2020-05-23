@@ -1,0 +1,8 @@
+package cmd;
+
+import graphique.formes.Forme;
+
+public interface Command {
+	public void execute(Forme f);
+
+}

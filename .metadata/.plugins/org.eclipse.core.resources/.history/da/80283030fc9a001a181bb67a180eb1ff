@@ -1,0 +1,27 @@
+package cmd;
+
+import dao.CarreDAO;
+import graphique.formes.Carre;
+
+public class CreateCarreCommand implements Command {
+	private Carre carre;
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		//carre.print();
+	CarreDAO cd=new CarreDAO();
+		cd.create(carre);
+		
+	}
+	public Carre getCarre() {
+		return carre;
+	}
+	public void setCarre(Carre carre) {
+		this.carre = carre;
+	}
+
+
+
+}ma3lich ngoulk haja? ani khoyft mnk bseh
+		goli :D
+		cheft f execute hedi tji thani l'ajout f la BDD

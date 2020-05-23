@@ -26,7 +26,7 @@ public class CercleDAO extends DAO<Cercle> {
 			prepare.setDouble(4, obj.getRayon());
 			int result = prepare.executeUpdate();
 			assert result == 1;
-			System.out.println("cercle Created :D");
+			System.out.println("Cercle ajoutée dans la BDD");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -35,7 +35,7 @@ public class CercleDAO extends DAO<Cercle> {
 
 	@Override
 	public Cercle find(String idCercle) {
-		Cercle obj = new Cercle();
+		Cercle obj = null;
 		try {
 			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Cercle WHERE idCercle=?");
 			prepare.setString(1, idCercle);
@@ -80,7 +80,20 @@ public class CercleDAO extends DAO<Cercle> {
 		}
 		return obj;
 	}
-
+	//pour la maj dans la bdd apres avoir déplacer un cercle
+	public void update(String obj,int x,int y) {
+		try {
+			PreparedStatement prepare = connect.prepareStatement("UPDATE Cercle SET abscisse = ?, ordonnee = ? WHERE idCercle = ?");
+			prepare.setInt(1, x);
+			prepare.setInt(2, y);
+			prepare.setString(3, obj);
+			int result = prepare.executeUpdate();
+			assert result == 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	@Override
 	public void delete(Cercle obj) {
 		try {

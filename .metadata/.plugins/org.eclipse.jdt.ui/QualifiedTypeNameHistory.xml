@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="graphique.formes.Triangle"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="org.hsqldb.Statement"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -16,11 +14,24 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="dao.GroupeFormeDAO"/>
-<fullyQualifiedTypeName name="graphique.formes.Forme"/>
 <fullyQualifiedTypeName name="graphique.formes.Graphic"/>
-<fullyQualifiedTypeName name="java.util.Vector"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
 <fullyQualifiedTypeName name="java.sql.Array"/>
 <fullyQualifiedTypeName name="org.hsqldb.jdbc.JDBCArrayBasic"/>
+<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+<fullyQualifiedTypeName name="cmd.CreateCercleCommand"/>
+<fullyQualifiedTypeName name="graphique.formes.Forme"/>
+<fullyQualifiedTypeName name="graphique.formes.Cercle"/>
+<fullyQualifiedTypeName name="cmd.DrawingTUI"/>
+<fullyQualifiedTypeName name="graphique.formes.Carre"/>
+<fullyQualifiedTypeName name="graphique.formes.Rectangle"/>
+<fullyQualifiedTypeName name="graphique.formes.Triangle"/>
+<fullyQualifiedTypeName name="dao.RectangleDAO"/>
+<fullyQualifiedTypeName name="dao.TriangleDAO"/>
+<fullyQualifiedTypeName name="dao.CarreDAO"/>
+<fullyQualifiedTypeName name="dao.CercleDAO"/>
+<fullyQualifiedTypeName name="java.sql.Connection"/>
+<fullyQualifiedTypeName name="graphique.formes.ConnectingToDB"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
 </qualifiedTypeNameHistroy>

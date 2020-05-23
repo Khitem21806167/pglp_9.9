@@ -1,0 +1,25 @@
+package cmd;
+
+import dao.CarreDAO;
+import graphique.formes.Carre;
+
+public class CreateCarreCommand implements Command {
+	private Carre carre;
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		//carre.print();
+	CarreDAO cd=new CarreDAO();
+		cd.create(carre);
+		
+	}
+	public Carre getCarre() {
+		return carre;
+	}
+	public void setCarre(Carre carre) {
+		this.carre = carre;
+	}
+
+
+
+}

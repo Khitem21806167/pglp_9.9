@@ -1,0 +1,18 @@
+package cmd;
+
+public class CommandQuit implements Command {
+	
+	DrawingTUI a ;
+	
+	CommandQuit(DrawingTUI a){
+		this.a=a ;
+	}
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		a.off() ;
+		
+	}
+
+}

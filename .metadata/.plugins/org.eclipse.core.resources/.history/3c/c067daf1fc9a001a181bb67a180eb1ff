@@ -1,0 +1,28 @@
+package cmd;
+
+import dao.CercleDAO;
+import graphique.formes.Cercle;
+
+//enregistrement du cercle créé par l'utilisateur
+public class CreateCercleCommand implements Command {
+
+	private Cercle cercle;
+	
+
+	public Cercle getCercle() {
+		return cercle;
+	}
+
+	public void setCercle(Cercle cercle) {
+		this.cercle = cercle;
+	}
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		cercle.print();
+	
+		//CercleDAO cd=new CercleDAO();
+		//cd.create(cercle);
+	}
+
+}

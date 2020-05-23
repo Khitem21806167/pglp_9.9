@@ -1,0 +1,11 @@
+package cmd;
+
+public class CreateTriangleCommand implements Command {
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

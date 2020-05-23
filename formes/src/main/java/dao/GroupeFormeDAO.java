@@ -38,7 +38,8 @@ public class GroupeFormeDAO extends DAO<GroupeForme> {
 				java.sql.PreparedStatement state = connect.prepareStatement("insert into ENSEMBLE (idEnsemble, idForme) values (?,?)");
 				state.setString(1, obj.getIdEnsemble());
 				state.setString(2,f.getId());
-				state.executeUpdate();	
+				state.executeUpdate();
+				System.out.println("Groupe Forme ajoutée dans la BDD");
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block

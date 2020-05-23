@@ -1,0 +1,19 @@
+package cmd;
+
+import dao.CercleDAO;
+import graphique.formes.Cercle;
+
+//enregistrement du cercle créé par l'utilisateur
+public class CreateCercleCommand implements Command {
+
+	private Cercle cercle;
+	
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+		CercleDAO cd=new CercleDAO();
+		
+	}
+
+}

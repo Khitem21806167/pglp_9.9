@@ -23,6 +23,7 @@ public class RectangleDAO extends DAO<Rectangle>{
 
 			int result = prepare.executeUpdate();
 			assert result == 1;
+			System.out.println("Rectangle ajoutée dans la BDD");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -31,12 +32,12 @@ public class RectangleDAO extends DAO<Rectangle>{
 
 	@Override
 	public Rectangle find(String idRectangle) {
-		Rectangle obj = new Rectangle();
+		Rectangle obj =null;
 		try {
 			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Rectangle WHERE idRectangle=?");
 			prepare.setString(1, idRectangle);
 			ResultSet result = prepare.executeQuery();
-			if(result.first()) {
+			while(result.next()) {
 				obj = new Rectangle(idRectangle, result.getInt("abscisse"), result.getInt("ordonnee"), result.getDouble("longueur"), result.getDouble("largeur"));
 			}
 		} catch (SQLException e) {
@@ -75,6 +76,21 @@ public class RectangleDAO extends DAO<Rectangle>{
 			e.printStackTrace();
 		}
 		return obj;
+	}
+	
+	//pour la maj dans la bdd apres avoir déplacer un rectangle
+	public void update(String obj, int x, int y) {
+		try {
+			PreparedStatement prepare = connect.prepareStatement("UPDATE Rectangle SET abscisse = ?, ordonnee = ? WHERE idRectangle = ?");
+			prepare.setInt(1, x);
+			prepare.setInt(2,y);
+			prepare.setString(3, obj);
+			int result = prepare.executeUpdate();
+			assert result == 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	
 	}
 
 	@Override

@@ -1,0 +1,22 @@
+package graphique.formes;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class ConnectingToDB {
+	static Connection c;
+	static public Connection getConnected()
+	{
+		c=null;
+		try {
+	    	c = DriverManager.getConnection("jdbc:derby:myDB"); 
+
+	    	}catch(Exception except) {
+	  	            except.printStackTrace();
+	 	       }
+	    	
+			return c;
+	}
+	
+
+}

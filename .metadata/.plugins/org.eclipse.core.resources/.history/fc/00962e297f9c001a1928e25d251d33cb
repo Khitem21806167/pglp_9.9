@@ -1,0 +1,48 @@
+package cmd;
+
+import graphique.formes.Carre;
+import graphique.formes.Cercle;
+import graphique.formes.Rectangle;
+import graphique.formes.Triangle;
+
+public class CommandMove implements Command {
+	static private String id;
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		 //traitement de move(interaction avec la bdd)
+		cd.connect=c;
+		Carre r=cd.find(id);
+		cerd.connect=c;
+		Cercle cc=cerd.find(id);
+		td.connect=c;
+		Triangle t=td.find(id);
+		rd.connect=c;
+		Rectangle re=rd.find(id);
+		if(r==null && cc==null && r==null && re==null  )
+		{
+			
+			System.out.println("Forme nn trouvé");
+		}
+		else if(r!=null)
+		{
+			//command
+		}
+		else if(cc!=null)
+		{
+			System.out.println("Forme Trouvé");
+		}
+		else if(t!=null)
+		{
+			System.out.println("Forme Trouvé");
+		}
+		else if(re!=null)
+		{
+			System.out.println("Forme Trouvé");
+		}
+		
+	}
+
+	
+	
+}

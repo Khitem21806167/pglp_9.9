@@ -5,8 +5,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Vector;
 
+import cmd.DrawingTUI;
 import dao.*;
 
 
@@ -38,6 +40,7 @@ public class App
 		}
 		else
 		{
+			
 			/*CREATION CERCLE*/
 			Cercle c=new Cercle();
 			c.setId("cercle N° 1");
@@ -57,7 +60,7 @@ public class App
 			
 				
 				
-				/*CREATION RECTANGLE*/
+				/*CREATION RECTANGLE
 				Triangle t=new Triangle();
 				t.setId("triangle N° 1");
 				t.setAbscisse(4);
@@ -78,7 +81,7 @@ public class App
 							System.out.println("TRIANGLE existe");
 						}
 					
-					/*CREATION carre*/
+					/*CREATION carre
 					Carre cr=new Carre();
 					cr.setId("carre N° 1");
 					cr.setAbscisse(4);
@@ -96,8 +99,8 @@ public class App
 								
 								System.out.println("CARRE existe");
 							}
-					
-						/*CREATION ENSEMBEL*/
+			
+						/*CREATION ENSEMBEL
 					GroupeForme gf = new GroupeForme();
 						gf.setIdEnsemble("groupe forme N°1");
 						ArrayList<Graphic> listeg = new ArrayList<Graphic>();
@@ -120,6 +123,16 @@ public class App
 							
 						}
 
+		*/
+			
+			DrawingTUI u=new DrawingTUI();
+			
+		//String s="move(cercle N° 1,(16,89))";
+			//u.NextCommand(s);c1
+			//u.NextCommand(s);*
+			
+		u.Menu();
+		
 		}
 		
     }

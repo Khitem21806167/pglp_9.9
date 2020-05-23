@@ -1,0 +1,6 @@
+package cmd;
+
+public class Command {
+	public void execute();
+
+}

@@ -1,0 +1,48 @@
+package cmd;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import dao.CarreDAO;
+import graphique.formes.Carre;
+
+public class CreateCarreCommand implements Command {
+	private Carre carre;
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		//carre.print();
+		Connection co=null;
+		try {
+	    	co = DriverManager.getConnection("jdbc:derby:myDB"); 
+
+	    	}catch(Exception except) {
+	  	            except.printStackTrace();
+	 	       }
+	    	
+	    	
+			if(co==null)
+			{
+				System.out.println("Not Connected to DB");
+			}
+			else
+			{ 	        
+	
+	CarreDAO cd=new CarreDAO();
+	cd.connect=co;
+	
+		cd.create(carre);
+		
+			}
+		
+	}
+	public Carre getCarre() {
+		return carre;
+	}
+	public void setCarre(Carre carre) {
+		this.carre = carre;
+	}
+
+
+
+}

@@ -23,6 +23,7 @@ public class TriangleDAO extends DAO<Triangle> {
 
 			int result = prepare.executeUpdate();
 			assert result == 1;
+			System.out.println("Triangle ajoutée dans la BDD");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -31,7 +32,7 @@ public class TriangleDAO extends DAO<Triangle> {
 
 	@Override
 	public Triangle find(String idTriangle) {
-		Triangle obj = new Triangle();
+		Triangle obj =null;
 		try {
 			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Triangle WHERE idTriangle=?");
 			prepare.setString(1, idTriangle);
@@ -76,6 +77,20 @@ public class TriangleDAO extends DAO<Triangle> {
 			e.printStackTrace();
 		}
 		return obj;
+	}
+	
+	//pour la maj dans la bdd apres avoir déplacer un triangle
+	public void update(String obj, int x , int y) {
+		try {
+			PreparedStatement prepare = connect.prepareStatement("UPDATE Rectangle SET abscisse = ?, ordonnee = ? WHERE idTriangle = ?");
+			prepare.setInt(1,x);
+			prepare.setInt(2, y);
+			prepare.setString(3, obj);
+			int result = prepare.executeUpdate();
+			assert result == 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	@Override

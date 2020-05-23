@@ -22,6 +22,7 @@ public class CarreDAO extends DAO<Carre> {
 			prepare.setDouble(4, obj.getLongueur());
 			int result = prepare.executeUpdate();
 			assert result == 1;
+			System.out.println("Carre ajoutée dans la BDD");
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -31,7 +32,7 @@ public class CarreDAO extends DAO<Carre> {
 
 	@Override
 	public Carre find(String idCarre) {
-		Carre obj = new Carre();
+		Carre obj = null;
 		try {
 			PreparedStatement prepare = connect.prepareStatement("SELECT * FROM Carre WHERE idCarre=?");
 			prepare.setString(1, idCarre);
@@ -75,6 +76,20 @@ public class CarreDAO extends DAO<Carre> {
 			e.printStackTrace();
 		}
 		return obj;
+	}
+	
+	//pour la maj dans la bdd apres avoir déplacer un carre
+	public void update(String obj,int x, int y) {
+		try {
+			PreparedStatement prepare = connect.prepareStatement("UPDATE Carre SET abscisse = ?, ordonnee = ? WHERE idCarre = ?");
+			prepare.setInt(1, x);
+			prepare.setInt(2, y);
+			prepare.setString(3, obj);
+			int result = prepare.executeUpdate();
+			assert result == 1;
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
 	}
 
 	@Override

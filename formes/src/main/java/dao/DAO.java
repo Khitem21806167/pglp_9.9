@@ -15,18 +15,9 @@ public abstract class DAO<T> {
 
 	
 	public DAO() {
-		try {
-			  
-		      /*  String db = "jdbc:hsqldb:hsql://localhost/graphic;ifexists=true";
-		        String user = "SA";
-		        String password = "";
-		      */
+		try {	 
 		 String dbURL = "jdbc:derby:myDB;create=true";
-			   
-		     
-		            // Create database connection
-		          
-						//connect = DriverManager.getConnection(db, user, password);
+		 // Create database connection         
          connect = DriverManager.getConnection(dbURL); 
 
 	         stmt = connect.createStatement();
@@ -67,45 +58,35 @@ public abstract class DAO<T> {
 	      if (!tables.next()) 
 	      {
 	    	  PreparedStatement pstmt = connect.prepareStatement(sqlForme);
-		    	 
-	    	  // ... repeat this step until the last parameter ....
-	    	 
+		    	 	    	 
 	    	  pstmt.executeUpdate();
 	      }
 	    
 	      tables = dbm.getTables(null, null, "CERCLE", null);
 	      if (!tables.next()) {
 	    	  PreparedStatement pstmt = connect.prepareStatement(sqlCercle);
-		    	 
-	    	  // ... repeat this step until the last parameter ....
-	    	 
+		    	 	    	 
 	    	  pstmt.executeUpdate();
 		    	
 		      }     
 	      tables = dbm.getTables(null, null, "TRIANGLE", null);
 	      if (!tables.next()) {
 	    	  PreparedStatement pstmt = connect.prepareStatement(sqlTriangle);
-		    	 
-	    	  // ... repeat this step until the last parameter ....
-	    	 
+		    	    	 
 	    	  pstmt.executeUpdate();
 		    	  
 		      }     
 	      tables = dbm.getTables(null, null, "CARRE", null);
 	      if (!tables.next()) {
 	    	  PreparedStatement pstmt = connect.prepareStatement(sqlCarre);
-		    	 
-	    	  // ... repeat this step until the last parameter ....
-	    	 
+		    	 	    	 
 	    	  pstmt.executeUpdate();
 		    			    
 		      }  
 	      tables = dbm.getTables(null, null, "RECTANGLE", null);
 	      if (!tables.next()) {
 	    	  PreparedStatement pstmt = connect.prepareStatement(sqlRectangle);
-		    	 
-	    	  // ... repeat this step until the last parameter ....
-	    	 
+		    	 	    	 
 	    	  pstmt.executeUpdate();
 		      }     
 	       
