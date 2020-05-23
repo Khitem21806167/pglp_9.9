@@ -18,8 +18,29 @@ import graphique.formes.GroupeForme;
 public class GroupeFormeDAO extends DAO<GroupeForme> {
 	Statement stmt = null;
     ResultSet result = null;
-
-  
+    //cree methode creat hna y'ajouter mn vecteur
+    public void create1(GroupeForme obj) {
+		// TODO Auto-generated method stub
+		Vector<String>v=new Vector<String>();
+		
+		 String idEns=obj.getIdEnsemble();
+		 try {
+			 stmt=connect.createStatement();
+			for (int i=0; i<v.size();i++)
+			{
+				
+				java.sql.PreparedStatement state = connect.prepareStatement("insert into ENSEMBLE (idEnsemble, idForme) values (?,?)");
+				state.setString(1, obj.getIdEnsemble());
+				state.setString(2,v.get(i).toString());
+				state.executeUpdate();
+				System.out.println("Groupe Forme ajoutée dans la BDD");
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();	
+		}
+		
+	}
 	@Override
 	public GroupeForme create(GroupeForme obj) {
 		// TODO Auto-generated method stub
@@ -101,12 +122,13 @@ public class GroupeFormeDAO extends DAO<GroupeForme> {
 		}
 		
 	}
-
+	
 
 
 	@Override
 	public GroupeForme update(GroupeForme obj) {
-		// TODO Auto-generated method stub
+		
+	
 		return null;
 	}
 

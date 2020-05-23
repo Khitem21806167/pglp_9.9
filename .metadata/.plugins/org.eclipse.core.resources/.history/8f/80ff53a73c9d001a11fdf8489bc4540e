@@ -1,0 +1,62 @@
+package cmd;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Vector;
+
+import dao.GroupeFormeDAO;
+import dao.RectangleDAO;
+import graphique.formes.GroupeForme;
+import graphique.formes.Rectangle;
+
+public class CreateEnsembleCommand implements Command {
+	static private Vector <String> v;
+	static private String idEns;
+	public static Vector<String> getV() {
+		return v;
+	}
+
+	public static void setV(Vector<String> v) {
+		CreateEnsembleCommand.v = v;
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+		Connection co=null;
+		try {
+	    	co = DriverManager.getConnection("jdbc:derby:myDB"); 
+
+	    	}catch(Exception except) {
+	  	            except.printStackTrace();
+	 	       }
+	    	
+	    	
+			if(co==null)
+			{
+				System.out.println("Not Connected to DB");
+			}
+			else
+			{ 	
+			GroupeFormeDAO gd = new GroupeFormeDAO();
+			gd.connect=co;
+			GroupeForme gf=new GroupeForme();
+			gf.setIdEnsemble(idEns);
+			
+		
+		
+		
+		
+	}
+
+	public static String getIdEns() {
+		return idEns;
+	}
+
+	public static void setIdEns(String idEns) {
+		CreateEnsembleCommand.idEns = idEns;
+	}
+
+}
+

@@ -131,7 +131,7 @@ public class App
 			//u.NextCommand(s);c1
 			//u.NextCommand(s);*
 			
-		u.Menu();
+		u.run();
 		
 		}
 		

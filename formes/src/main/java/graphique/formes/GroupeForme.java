@@ -9,6 +9,21 @@ public class GroupeForme implements Graphic {
 	private String idEnsemble;
 	private ArrayList<Graphic> children = new ArrayList<Graphic>(); 
 	private String idForme;
+	private Vector <String> idFormes;
+	public GroupeForme (String idEns,Vector <String> idForms)
+	{
+		this.idEnsemble=idEns;
+		this.idFormes=idForms;
+	}
+	
+	public Vector<String> getIdFormes() {
+		return idFormes;
+	}
+
+	public void setIdFormes(Vector<String> idFormes) {
+		this.idFormes = idFormes;
+	}
+
 	public GroupeForme (String idEns,String idFor)
 	{
 		this.idEnsemble=idEns;
@@ -63,6 +78,15 @@ public class GroupeForme implements Graphic {
 		
 	}
 	
+	public void move2(int dx, int dy) {
+		// TODO Auto-generated method stub
+		for (int i=0; i<idFormes.size();i++) {
+            Object object = idFormes.get(i);		
+            Graphic forme = (Graphic)object;
+            forme.move(dx, dy);
+        }	
+		
+	}
 
 	@Override
 	public void move(int dx, int dy) {

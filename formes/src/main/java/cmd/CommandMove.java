@@ -5,10 +5,12 @@ import java.sql.DriverManager;
 
 import dao.CarreDAO;
 import dao.CercleDAO;
+import dao.GroupeFormeDAO;
 import dao.RectangleDAO;
 import dao.TriangleDAO;
 import graphique.formes.Carre;
 import graphique.formes.Cercle;
+import graphique.formes.GroupeForme;
 import graphique.formes.Rectangle;
 import graphique.formes.Triangle;
 
@@ -17,6 +19,7 @@ public class CommandMove implements Command {
 	static CercleDAO cerd = new CercleDAO();
 	static TriangleDAO td=new TriangleDAO();
 	static RectangleDAO rd = new RectangleDAO();
+	static GroupeFormeDAO gf = new GroupeFormeDAO();
 	static private String id;
 	static int x,y;
 	public static int getX() {
@@ -50,7 +53,8 @@ public class CommandMove implements Command {
 			}
 			else
 			{ 	        
-	
+				gf.connect = c;
+				GroupeForme f=gf.find(id);
 		cd.connect=c;
 		Carre r=cd.find(id);
 		cerd.connect=c;
@@ -59,37 +63,40 @@ public class CommandMove implements Command {
 		Triangle t=td.find(id);
 		rd.connect=c;
 		Rectangle re=rd.find(id);
-		if(r==null && cc==null && r==null && re==null  )
+		if(r==null && cc==null && r==null && re==null  && f==null )
 		{
 			
-			System.out.println("Forme nn trouvé");
+			System.out.println("Forme ou groupe nn trouvée");
 		}
 		else if(r!=null)
 		{
 			r.move(x, y);
 			cd.update(id,x,y);
-			System.out.println("Forme deplacé");
+			System.out.println("Forme deplacée");
 			
 		}
 		else if(cc!=null)
 		{
 			cc.move(x, x);
 			cerd.update(id, x, y);
-			System.out.println("Forme deplacé");
+			System.out.println("Forme deplacée");
 		}
 		else if(t!=null)
 		{
 			t.move(x, y);
 			td.update(id,x,y);
-			System.out.println("Forme deplacé");
+			System.out.println("Forme deplacée");
 		}
 		else if(re!=null)
 		{
 			re.move(x, y);
 			rd.update(id,x,y);
-			System.out.println("Forme deplacé");
+			System.out.println("Forme deplacée");
 		}
-		
+		/*
+		 * else if(f!=null) { f.move(x, y); gf.update(f);
+		 * System.out.println("Ensemble deplacée"); }
+		 */
 	}
 	}
 	public static String getId() {

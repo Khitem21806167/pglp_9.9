@@ -4,7 +4,6 @@
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="org.hsqldb.Statement"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
-<fullyQualifiedTypeName name="graphique.formes.GroupeForme"/>
 <fullyQualifiedTypeName name="graphique.formes.App"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -13,7 +12,6 @@
 <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="dao.GroupeFormeDAO"/>
 <fullyQualifiedTypeName name="graphique.formes.Graphic"/>
 <fullyQualifiedTypeName name="java.sql.Array"/>
 <fullyQualifiedTypeName name="org.hsqldb.jdbc.JDBCArrayBasic"/>
@@ -34,4 +32,6 @@
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="dao.GroupeFormeDAO"/>
+<fullyQualifiedTypeName name="graphique.formes.GroupeForme"/>
 </qualifiedTypeNameHistroy>

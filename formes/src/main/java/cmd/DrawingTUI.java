@@ -1,6 +1,7 @@
 package cmd;
 
 import java.sql.Connection;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -10,7 +11,8 @@ import dao.TriangleDAO;
 import dao.RectangleDAO;
 import graphique.formes.Carre;
 import graphique.formes.Cercle;
-
+import graphique.formes.Graphic;
+import graphique.formes.GroupeForme;
 import graphique.formes.Rectangle;
 import graphique.formes.Triangle;
 
@@ -34,6 +36,7 @@ public class DrawingTUI {
 	static CreateTriangleCommand commandtriangle = new CreateTriangleCommand();
 	static CreateRectangleCommand commandrectangle = new CreateRectangleCommand();
 	static CommandMove commandmove=new CommandMove();
+	static CreateEnsembleCommand commandensemble=new CreateEnsembleCommand();
 	
 	
 	
@@ -99,8 +102,9 @@ public class DrawingTUI {
 		
 		if(type.equalsIgnoreCase("GroupeForme"))
 		{
+			String idensemble = "";
 			
-			Vector <String> vecteurdeforme = new Vector() ;
+			Vector <String> vecteurdeforme = new Vector<String>() ;
 			
 			
 			if(!(line.charAt(a)=='('))
@@ -109,33 +113,34 @@ public class DrawingTUI {
 			}
 			else {
 				a++;
-				String idensemble="";
+				
 				do {
 					idensemble+=line.charAt(a);
 					a++;
 				}while((line.charAt(a)!=','));
-				System.out.println(idensemble);
 				a++;
-				String s ="";
-				do {
+				String s="";
+				do{
 					
-					
-					if(line.charAt(a)==',') 
-						{
-						vecteurdeforme.addElement(s);
-						System.out.println(s);
-						a++;
-						s="";
-						}
-										else {
-											s+=line.charAt(a);
+					s+=line.charAt(a);
 					a++;
+					if(line.charAt(a)==',')
+					{
+						vecteurdeforme.addElement(s);
+						s="";
+						a++;
 					}
-				}while((line.charAt(a)!=')'));
+					
+				}while(line.charAt(a)!=')');
+				vecteurdeforme.addElement(s);
 				
 			}
-			System.out.println(vecteurdeforme.size());
-			
+			//Hna diri commandGroupeForme
+			GroupeForme g=new GroupeForme();
+			g.setIdEnsemble(idensemble);
+			g.setIdFormes(vecteurdeforme);
+			commandensemble.setGf(g);
+			commandensemble.execute();
 		}
 		
 		else {
@@ -432,7 +437,7 @@ public class DrawingTUI {
 		
 		}
 	
-	static public int Menu()
+	static public int run()
 	{
 		int x=0;
 		do
@@ -461,7 +466,7 @@ public class DrawingTUI {
 				}while(ss.equals(""));
 				System.out.println(ss);
 				NextCommand(ss);
-				Menu();
+				run();
 			}break;
 			
 			case 2:{
@@ -474,7 +479,7 @@ public class DrawingTUI {
 				}while(ss.equals(""));
 				System.out.println(ss);
 				NextCommand(ss);
-				Menu();
+				run();
 			}break;
 			
 			case 3:{
@@ -487,7 +492,7 @@ public class DrawingTUI {
 				}while(ss.equals(""));
 				System.out.println(ss);
 				NextCommand(ss);
-				Menu();
+				run();
 			}break;
 			
 			case 4:{

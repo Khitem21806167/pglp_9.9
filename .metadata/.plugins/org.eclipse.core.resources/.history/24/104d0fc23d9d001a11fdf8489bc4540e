@@ -1,0 +1,34 @@
+package cmd;
+
+import java.util.Vector;
+
+public class CreateEnsembleCommand implements Command {
+	
+	static private String idEns;
+	static private Vector <String> idformes;
+
+	public static Vector<String> getIdformes() {
+		return idformes;
+	}
+
+	public void setIdformes(Vector<String> idformes) {
+		CreateEnsembleCommand.idformes = idformes;
+	}
+
+	@Override
+	public void execute() {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+	public static String getIdEns() {
+		return idEns;
+	}
+
+	public static void setIdEns(String idEns) {
+		CreateEnsembleCommand.idEns = idEns;
+	}
+
+}
+
