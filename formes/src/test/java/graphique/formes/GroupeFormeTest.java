@@ -23,7 +23,7 @@ public class GroupeFormeTest {
         String d=g.afficher();
        System.out.println("d="+d);
         
-       assertEquals("Cercle(centre=(15, 10), rayon=11.0)\n" + "Triangle(coin=(2, 3), hauteur=8.0, base=19.0)\n",d);
+       assertEquals("Cercle(centre=(15, 10)), longueur=\n",d);
      
 	}
 	

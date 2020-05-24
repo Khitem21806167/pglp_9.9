@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="AppTest" project="formes" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="graphique.formes.AppTest" time="0.001">
+    <testcase name="creationCercle" classname="graphique.formes.AppTest" time="0.001"/>
+    <testcase name="creationTriangle" classname="graphique.formes.AppTest" time="0.0"/>
+    <testcase name="creationEnsemble" classname="graphique.formes.AppTest" time="0.0"/>
+  </testsuite>
+</testrun>

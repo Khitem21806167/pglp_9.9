@@ -39,5 +39,8 @@ public class Carre extends Forme {
 		// TODO Auto-generated method stub
 		return "Carre(coin=("+getAbscisse()+", "+getOrdonnee()+"), longueur="+getLongueur()+")\n";
 	}
+	
+	
+
 
 }

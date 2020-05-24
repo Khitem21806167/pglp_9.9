@@ -1,0 +1,25 @@
+package graphique.formes;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
+
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+{
+   @Test 
+   public void creationCercle(){
+	   Carre cr=new Carre();
+		cr.setId("carre N° 1");
+		cr.setAbscisse(4);
+			cr.setOrdonnee(5);
+			cr.setLongueur(12);	
+			cr.print();
+			String d= cr.afficher();
+			  assertEquals("Carre(coin=(4, 5), longueur=12.0)\n", d);
+   }
+    
+}

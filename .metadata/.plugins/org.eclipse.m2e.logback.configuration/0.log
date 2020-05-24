@@ -8171,3 +8171,131 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact org.apache.de
 2020-05-24 00:10:24,088 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
 2020-05-24 00:10:24,088 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2020-05-24 00:10:24,088 [Worker-36: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 00:15:00,671 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2020-05-24 00:16:49,878 [Worker-4: Building] ERROR o.e.m.c.i.URLConnectionCaches - Unexpected URLConnection defaultUseCaches enabled
+2020-05-24 00:16:50,103 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 00:16:50,103 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 00:16:50,105 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 00:16:50,105 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 00:51:20,856 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-24 02:50:23,520 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-05-24 02:56:37,003 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:37,005 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 02:56:37,008 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:37,008 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 02:56:37,246 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:37,251 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-05-24 02:56:37,267 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:37,268 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2020-05-24 02:56:40,944 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:40,944 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 02:56:40,946 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:40,946 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 02:56:54,465 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:54,465 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 02:56:54,466 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:56:54,467 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 02:57:17,597 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:57:17,597 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 02:57:17,599 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 02:57:17,599 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:03:13,365 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:13,365 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:03:13,367 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:13,367 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:03:25,120 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:25,121 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:03:25,123 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:25,123 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:03:35,146 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:35,146 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:03:35,149 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:03:35,149 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:06:46,848 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:06:46,849 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:06:46,850 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:06:46,851 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:07:00,137 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:07:00,137 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:07:00,139 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:07:00,139 [Worker-31: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:09:20,700 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:09:20,700 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:09:20,702 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:09:20,702 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:10:27,792 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:10:27,792 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:10:27,793 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:10:27,794 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:11:00,519 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:00,520 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:11:00,521 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:00,522 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:11:12,546 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:12,547 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:11:12,548 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:12,548 [Worker-10: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:11:21,654 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:21,654 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:11:21,656 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:21,656 [Worker-29: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:11:40,855 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:40,855 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:11:40,857 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:11:40,858 [Worker-13: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:13:01,943 [Worker-33: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:01,944 [Worker-33: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:13:01,946 [Worker-33: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:01,946 [Worker-33: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:13:10,495 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:10,495 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:13:10,496 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:10,497 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:13:22,880 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:22,880 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:13:22,881 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:22,881 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:13:51,498 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:51,498 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:13:51,500 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:13:51,500 [Worker-33: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:14:58,191 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:14:58,191 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:14:58,192 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:14:58,193 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:18:56,594 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:18:56,595 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:18:56,596 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:18:56,596 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:19:14,406 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:14,406 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:19:14,407 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:14,407 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:19:20,988 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:20,988 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:19:20,990 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:20,990 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:19:42,468 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:42,468 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:19:42,470 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:19:42,470 [Worker-32: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:20:41,977 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:20:41,977 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:20:41,978 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:20:41,979 [Worker-31: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:20:53,109 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:20:53,110 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:20:53,111 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:20:53,111 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:21:11,087 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:21:11,087 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:21:11,088 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:21:11,088 [Worker-32: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:21:26,632 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:21:26,632 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:21:26,633 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:21:26,634 [Worker-29: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
+2020-05-24 03:23:08,354 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:23:08,354 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\main\resources
+2020-05-24 03:23:08,355 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2020-05-24 03:23:08,356 [Worker-30: Launching AppTest] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory E:\GRAPHICS_PROJECT\formes\src\test\resources
